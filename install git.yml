@@ -1,0 +1,11 @@
+---
+- name: install git and pull source code
+  hosts: dev
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: Install Git
+      yum:
+        name: git
+        state: present
